@@ -2,7 +2,11 @@ def display_current_inventory(inventory_list)
   # use #each to iterate through each item of the inventory_list (a hash)
   # use puts to output each list item "<key>, quantity: <value>" to console
   inventory_list.each do |item, quantity|
-    puts "#{item}, quantity: #{quantity}"
+    if quantity.nil? 
+      puts "#{item}, quantity: "
+    else
+      puts "#{item}, quantity: #{quantity}"
+    end
   end
 end
 
@@ -18,6 +22,7 @@ end
 def find_absolute_values(numbers)
   # use #map to iterate through each item of the numbers (an array)
   # return an array of absolute values of each number
+  numbers.map {|number| number.abs}
 end
 
 def find_low_inventory(inventory_list)

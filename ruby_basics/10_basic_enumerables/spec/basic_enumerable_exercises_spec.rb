@@ -14,7 +14,7 @@ RSpec.describe 'Basic Enumerable Exercises' do
     end
 
     # remove the 'x' from the line below to unskip the test
-    xit 'outputs item without quantity when value is nil' do
+    it 'outputs item without quantity when value is nil' do
       expect($stdout).to receive(:puts).with("pineapples, quantity: ")
       fruit = { pineapples: nil }
       display_current_inventory(fruit)
@@ -31,7 +31,7 @@ RSpec.describe 'Basic Enumerable Exercises' do
       display_guess_order(guesses)
     end
 
-    xit 'outputs each guess of integers in order' do
+    it 'outputs each guess of integers in order' do
       expect($stdout).to receive(:puts).with("Guess #1 is 553")
       expect($stdout).to receive(:puts).with("Guess #2 is 554")
       expect($stdout).to receive(:puts).with("Guess #3 is 555")
@@ -42,13 +42,13 @@ RSpec.describe 'Basic Enumerable Exercises' do
 
   describe 'find absolute values exercise' do
     
-    xit 'returns an array of positive integers' do
+    it 'returns an array of positive integers' do
       numbers = [0, -7, 14, -21]
       result = [0, 7, 14, 21]
       expect(find_absolute_values(numbers)).to eq(result)
     end
 
-    xit 'returns an array of positive floating point numbers' do
+    it 'returns an array of positive floating point numbers' do
       numbers = [-3.14, 6.28, -9.42]
       result = [3.14, 6.28, 9.42]
       expect(find_absolute_values(numbers)).to eq(result)
