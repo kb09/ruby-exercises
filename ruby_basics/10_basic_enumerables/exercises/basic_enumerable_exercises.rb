@@ -1,6 +1,9 @@
 def display_current_inventory(inventory_list)
   # use #each to iterate through each item of the inventory_list (a hash)
   # use puts to output each list item "<key>, quantity: <value>" to console
+  inventory_list.each do |item, quantity|
+    puts "#{item}, quantity: #{quantity}"
+  end
 end
 
 def display_guess_order(guesses)
